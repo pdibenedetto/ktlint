@@ -4,8 +4,22 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 ### Added
+- SARIF output support ([#1102](https://github.com/pinterest/ktlint/issues/1102))
 ### Fixed
+- Remove needless blank lines in dot qualified expression ([#1077](https://github.com/pinterest/ktlint/issues/1077))
+- Fix false positives for SpacingBetweenDeclarationsWithAnnotationsRule ([#1125](https://github.com/pinterest/ktlint/issues/1125))
+- Fix false positive with eol comment (`annotation-spacing`) ([#1124](https://github.com/pinterest/ktlint/issues/1124))
+- Fix KtLint dependency variant selection ([#1114](https://github.com/pinterest/ktlint/issues/1114))
+- Fix false positive with 'by lazy {}' (`indent`) ([#1162](https://github.com/pinterest/ktlint/issues/1162))
+- Fix false positive with value argument list has lambda (`indent`) ([#764](https://github.com/pinterest/ktlint/issues/764))
+- Fix false positive in lambda in dot qualified expression (`argument-list-wrapping`) ([#1112](https://github.com/pinterest/ktlint/issues/1112))
+- Fix false positive with multiline expression with elvis operator in assignment (`indent`) ([#1165](https://github.com/pinterest/ktlint/issues/1165))
+- Ignore backticks in imports for ordering purposes (`import-ordering`) ([#1106](https://github.com/pinterest/ktlint/issues/1106))
+- Fix false positive with elvis operator and comment (`chain-wrapping`) ([#1055](https://github.com/pinterest/ktlint/issues/1055))
+- Fix false negative in when conditions (`chain-wrapping`) ([#1130](https://github.com/pinterest/ktlint/issues/1130))
 ### Changed
+- Updated to dokka 1.4.32 ([#1148](https://github.com/pinterest/ktlint/pull/1148))
+- Updated Kotlin to 1.5.20 version
 ### Removed
 
 ## [0.41.0] - 2021-03-16
@@ -39,7 +53,7 @@ Thank you to [t-kameyama](https://github.com/t-kameyama) and [paul-dingemans](ht
 - Fix experimental:annotation-spacing-rule autocorrection with comments
 - Migrate from klob dependency and fix negated globs passed to CLI are no longer worked ([#999](https://github.com/pinterest/ktlint/issues/999))
   **Breaking**: absolute paths globs will no longer work, check updated README
-  
+
 ### Changed
 - Update Gradle shadow plugin to `6.1.0` version
 - Align with Kotlin plugin on how alias pattern is represented for imports layout rule ([#753](https://github.com/pinterest/ktlint/issues/753))
